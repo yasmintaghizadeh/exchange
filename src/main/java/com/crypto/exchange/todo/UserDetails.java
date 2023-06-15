@@ -1,4 +1,4 @@
-package com.crypto.exchange.models.dto;
+package com.crypto.exchange.todo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -15,4 +15,5 @@ public class UserDetails  {
     private String sub;
     @JsonIgnore
     private String token;
+
 }

@@ -15,8 +15,10 @@ import java.util.List;
 @Builder
 @Table(name = "wallet")
 public class Wallet extends AbstractEntity {
-    private String walletPID;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String walletID;
     private Long balance;
+
 
 
     @OneToMany(mappedBy = "wallet",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
@@ -24,4 +26,6 @@ public class Wallet extends AbstractEntity {
 
     @OneToMany(mappedBy = "wallet",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Transaction> transactions;
+    @OneToOne
+    private User user;
 }

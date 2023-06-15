@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public abstract class AbstractService<E,R extends JpaRepository<E,String>> {
     @Autowired
-    private R repository;
+    protected R repository;
 
     public void add(E e) throws Exception{
         repository.save(e);

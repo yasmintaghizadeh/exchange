@@ -1,6 +1,5 @@
-package com.crypto.exchange.service;
+package com.crypto.exchange.todo;
 
-import com.crypto.exchange.models.dto.UserDetails;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

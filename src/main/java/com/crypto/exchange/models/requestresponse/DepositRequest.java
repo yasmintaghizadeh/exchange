@@ -1,6 +1,6 @@
 package com.crypto.exchange.models.requestresponse;
 
-import com.crypto.exchange.models.enums.TransactionStatus;
+import com.crypto.exchange.models.enums.TransactionBetween;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +10,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransactionResponse {
-    private TransactionStatus status;
+public class DepositRequest {
+    private String walletId;
+    private Long amount;
+    private TransactionBetween type;
+    private String receiverWalletId;
 }

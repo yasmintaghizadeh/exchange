@@ -1,34 +1,38 @@
 package com.crypto.exchange.exception;
 
-public class ServiceException extends Exception{
-    private final String errorcode;
+import lombok.Getter;
 
-    public ServiceException(String errorcode) {
+@Getter
+public class ServiceException extends Exception{
+    private final String errorCode;
+
+    public ServiceException(String errorCode) {
         super();
-        this.errorcode = errorcode;
+        this.errorCode = errorCode;
     }
 
-    public ServiceException(String message, String errorcode) {
+    public ServiceException(String message, String errorCode) {
         super(message);
-        this.errorcode = errorcode;
+        this.errorCode = errorCode;
     }
 
     public ServiceException(String message, Throwable cause, String errorcode) {
         super(message, cause);
-        this.errorcode = errorcode;
+        this.errorCode = errorcode;
     }
 
     public ServiceException(Throwable cause, String errorcode) {
         super(cause);
-        this.errorcode = errorcode;
+        this.errorCode = errorcode;
     }
 
     protected ServiceException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, String errorcode) {
         super(message, cause, enableSuppression, writableStackTrace);
-        this.errorcode = errorcode;
+        this.errorCode = errorcode;
     }
 
 
-
-
+    public String getErrorCode() {
+        return errorCode;
+    }
 }
